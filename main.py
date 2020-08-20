@@ -2,7 +2,6 @@ from src.model import get_model, load_weights
 from src.preprocess import INFER_TRANSFORMS
 from src.infer import infer_once
 import numpy as np
-import streamlit as st
 
 
 DEBUG = True
