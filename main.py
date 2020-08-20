@@ -3,10 +3,11 @@ from src.preprocess import INFER_TRANSFORMS
 from src.infer import infer_once
 import numpy as np
 
+
 DEBUG = True
 MODEL_CKPT_PATH = r'data\model_ckpts\model_epoch=11_val_auc=0.8486.ckpt'
-RESNEST_MODEL = 'resnest50_fast_4s1x64d'
-IMAGE_PATH = r'data\images\melanoma7.jpg'
+RESNEST_MODEL = 'resnest50_fast_4s1x64d'  # ~FIXED~
+IMAGE_PATH = r'data\images\melanoma7.jpg'  # select from streamlit upload
 TTA = 4
 THRESHOLD = 0.5
 

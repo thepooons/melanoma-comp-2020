@@ -1,9 +1,8 @@
-import cv2
 import torch
 
 
 def get_image(
-    image_path,
+    image,
     transforms
 ):
     """Lightweight dataset + dataloader
@@ -16,16 +15,13 @@ def get_image(
         torch.Tensor: the image is preprocessed and converted into a
         torch.Tensor
     """
-    image = cv2.imread(image_path)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = transforms(image=image)
     return image
 
 
-def infer_once(image_path, transforms, model):
-    # load the image to make prediction
+def infer_once(image, transforms, model):
     image = get_image(
-        image_path=image_path,
+        image=image,
         transforms=transforms,
     )['image']
     model.eval()
