@@ -23,7 +23,6 @@ def get_image(
 
 
 def infer_once(image_path, transforms, model):
-    # load the image to make prediction
     image = get_image(
         image_path=image_path,
         transforms=transforms,
