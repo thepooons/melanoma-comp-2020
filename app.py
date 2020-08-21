@@ -13,7 +13,7 @@ TTA = 4 if DEBUG else 8
 THRESHOLD = 0.5
 
 if DEBUG:
-    print('THIS PROGRAM IS WORKING IN DEBUG MODE')
+    print('~:~:~THIS PROGRAM IS WORKING IN DEBUG MODE~:~:~')
 
 # this is `STREAMLIT` BRANCH
 st.write('# SIIM ISIC Melanoma Classification Demo')
@@ -45,29 +45,29 @@ try:
     st.write(image.shape)
     st.image(image, use_column_width=True)
 
-    with st.spinner("Running models..."):
-        # create the model and load the weights
-        model = get_model(RESNEST_MODEL)
-        model = load_weights(
-            model=model,
-            model_ckpt_path=MODEL_CKPT_PATH,
-            )
-        if DEBUG:
-            print(type(model))
+    # create the model and load the weights
+    model = get_model(RESNEST_MODEL)
+    model = load_weights(
+        model=model,
+        model_ckpt_path=MODEL_CKPT_PATH,
+        )
+    if DEBUG:
+        print(type(model))
 
-        predictions = []
-        for _ in range(TTA):
-            predictions.append(
-                infer_once(
-                    image=image,
-                    transforms=INFER_TRANSFORMS,
-                    model=model,
-                )
+    predictions = []
+    for _ in range(TTA):
+        predictions.append(
+            infer_once(
+                image=image,
+                transforms=INFER_TRANSFORMS,
+                model=model,
+                debug=DEBUG,
             )
+        )
 
-        diagnosis = 'Benign' if np.mean(predictions) < THRESHOLD\
-            else 'Malignant Melanoma'
-        st.write("The model diagnosed the image as:", diagnosis)
+    diagnosis = 'Benign' if np.mean(predictions) < THRESHOLD\
+        else 'Malignant Melanoma'
+    st.write("The model diagnosed the image as:", diagnosis)
 
 except Exception:
     st.write('Upload an image of skin lesion for further actions')

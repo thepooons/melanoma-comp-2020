@@ -3,7 +3,8 @@ import torch
 
 def get_image(
     image,
-    transforms
+    transforms,
+    debug=False
 ):
     """Lightwieght Dataset+Dataloader
 
@@ -14,14 +15,19 @@ def get_image(
     Returns:
         numpy.array: the prediction of the model on the image uploaded
     """
+    if debug:
+        print('~:~:~preprocessing the image')
     image = transforms(image=image)
     return image
 
 
-def infer_once(image, transforms, model):
+def infer_once(image, transforms, model, debug=False):
+    if debug:
+        print('~:~:~making predictions x1')
     image = get_image(
         image=image,
         transforms=transforms,
+        debug=debug,
     )['image']
     model.eval()
 
