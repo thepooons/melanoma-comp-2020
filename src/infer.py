@@ -5,15 +5,14 @@ def get_image(
     image,
     transforms
 ):
-    """Lightweight dataset + dataloader
+    """Lightwieght Dataset+Dataloader
 
     Args:
-        image_path (str): path of the image
-        transforms (Albumentations): transforms to apply on the images
+        image (cv2.Image): this is the image uploaded from the `file_uploader`
+        transforms (A.compose): transformations to be applied to the image
 
     Returns:
-        torch.Tensor: the image is preprocessed and converted into a
-        torch.Tensor
+        numpy.array: the prediction of the model on the image uploaded
     """
     image = transforms(image=image)
     return image
