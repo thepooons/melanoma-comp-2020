@@ -42,6 +42,6 @@ def infer_once(image, transforms, model, debug=False):
         debug=debug,
     )['image']
     model.eval()
-
-    prediction = torch.sigmoid(model(image.unsqueeze(dim=0))).detach()
+    with torch.no_grad():
+        prediction = torch.sigmoid(model(image.unsqueeze(dim=0))).detach()
     return prediction.numpy()
