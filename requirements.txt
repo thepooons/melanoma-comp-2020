@@ -21,6 +21,7 @@ defusedxml==0.6.0
 docutils==0.15.2
 entrypoints==0.3
 enum-compat==0.0.3
+flake8==3.8.3
 future==0.18.2
 idna==2.10
 imageio==2.9.0
@@ -39,6 +40,7 @@ jupyter-core==4.6.3
 kiwisolver==1.2.0
 MarkupSafe==1.1.1
 matplotlib==3.3.1
+mccabe==0.6.1
 mistune==0.8.4
 nbconvert==5.6.1
 nbformat==5.0.7
@@ -57,8 +59,10 @@ prometheus-client==0.8.0
 prompt-toolkit==3.0.6
 protobuf==3.13.0
 pyarrow==1.0.0
+pycodestyle==2.6.0
 pycparser==2.20
 pydeck==0.4.1
+pyflakes==2.2.0
 Pygments==2.6.1
 pyparsing==2.4.7
 pyrsistent==0.16.0
