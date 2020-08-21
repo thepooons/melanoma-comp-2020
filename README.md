@@ -9,6 +9,6 @@ This repository houses the code for the streamlit + heroku app backed with a CNN
 - [x] Create a local web app using streamlit:
     - [x] Disclaimer, regarding incompetency of the model to compete with professional medical diagnosis
     - [x] Upload the image
-    - [x] Run the model's `make_prediction` method to create the prediction on the image uploaded
+    - [x] Run the model's `infer_once` method to create the prediction on the image uploaded
 - [ ] Upload to heroku:
     - [ ] Create neccessary changes to repository to make it work on heroku
