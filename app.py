@@ -12,6 +12,9 @@ RESNEST_MODEL = 'resnest50_fast_4s1x64d'  # ~FIXED~
 TTA = 4 if DEBUG else 8
 THRESHOLD = 0.5
 
+if DEBUG:
+    print('THIS PROGRAM IS WORKING IN DEBUG MODE')
+
 # this is `STREAMLIT` BRANCH
 st.write('# SIIM ISIC Melanoma Classification Demo')
 st.info('**DISCLAIMER: This app is in no way a system eligible\
