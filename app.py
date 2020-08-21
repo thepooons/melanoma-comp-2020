@@ -9,7 +9,7 @@ import numpy as np
 DEBUG = True
 MODEL_CKPT_PATH = r'data\model_ckpts\model_epoch=14_val_auc=0.8892.ckpt'
 RESNEST_MODEL = 'resnest50_fast_4s1x64d'  # ~FIXED~
-TTA = 4
+TTA = 4 if DEBUG else 8
 THRESHOLD = 0.5
 
 # this is `STREAMLIT` BRANCH
