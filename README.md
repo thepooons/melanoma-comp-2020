@@ -27,7 +27,7 @@ Follow same steps to run the web app on a cloud vm.
 - **Streamlit**
 
 ## Author(s):
-[Puneet Singh](twitter.com/thepooons)
+[Puneet Singh](https://twitter.com/thepooons)
 
 ## Acknowledgements:
 - Zhang, H., Wu, C., Zhang, Z., Zhu, Y., Zhang, Z., Lin, H., Sun, Y., He, T., Muller, J., Manmatha, R., Li, M., & Smola, A. (2020). ResNeSt: Split-Attention NetworksarXiv preprint arXiv:2004.08955.
