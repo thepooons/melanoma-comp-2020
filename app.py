@@ -10,11 +10,12 @@ import gc
 
 if __name__ == "__main__":
     try:
-        if sys.argv[1].lower() == 'debug':
-            DEBUG = True
+        if '.ckpt' in sys.argv[1].lower():
+            MODEL_CKPT_PATH = sys.argv[1]
     except IndexError:
-        DEBUG = False
-    MODEL_CKPT_PATH = r'data/model_epoch=14_val_auc=0.8892.ckpt'
+        print('Please download the network weights and provide its path')
+
+    DEBUG = False
     RESNEST_MODEL = 'resnest50_fast_4s1x64d'  # ~FIXED~
     TTA = 4 if DEBUG else 8
     THRESHOLD = 0.5
