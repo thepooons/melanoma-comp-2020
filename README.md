@@ -4,7 +4,7 @@ This repository houses the code for a streamlit powered web app (capable of runn
 ## Model Training:
 - Note: Training code is NOT available in this repository.
 - The CNN used is a `resnest50_fast_4s1x64d` variant of `ResNeSt` family of CNNs published in [ResNeSt: Split-Attention Networks](https://arxiv.org/abs/2004.08955) by Hang Zhang et al.
-- The network is trained on an NVIDIA V100 TENSOR CORE GPU provided by [Kaggle](kaggle.com) in the GPU accelerator version of Kaggle Kernels, however the weight tensors are converted from cuda tensors to CPU tenesors to allow for inferring on machines without a GPU.
+- The network is trained on an NVIDIA V100 TENSOR CORE GPU provided by [Kaggle](https://kaggle.com) in the GPU accelerator version of Kaggle Kernels, however the weight tensors are converted from cuda tensors to CPU tenesors to allow for inferring on machines without a GPU.
 - The network is trained on two thirds of the ISIC 2020 JPEG images and all the JPEG images of ISIC 2019 (and 2018) resized to 128*128 sq. pixels for 15 epochs with a batch size of 256.
 - The model reaches a validation AUC (calculated on the third part of ISIC 2020 data dropped from train set) of 0.8892 with single inference and 0.9010 with Test Time Augmentations.
 - Providing better model weights is WIP.
