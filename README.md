@@ -15,7 +15,7 @@ Follow same steps to run the web app on a cloud vm.
 - [optional but recommended] Set up a virtual environement.
 - Run `pip install -r requiments.txt` to install all* the python libraries.    
     - *`opencv-python` needs to be installed using [these](https://docs.opencv.org/master/d2/de6/tutorial_py_setup_in_ubuntu.html) steps.
-- Download the weights of the Neural Network from [here](). 
+- Download the weights of the Neural Network from [here](https://drive.google.com/file/d/1M6w0WOjm1nLkDxl43_iwvIM-lVtfJPD_/view?usp=sharing). 
 - Run `streamlit run app.py <path/of/the/weights_file(.ckpt)>` in the system CLI.
 - In a web browser of choice, open `localhost:8501`.  
 
