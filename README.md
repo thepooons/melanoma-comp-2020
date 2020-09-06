@@ -1,7 +1,7 @@
 # Melanoma Classification Web App
 This repository houses the code for a streamlit powered web app (capable of running on an AWS `t2.micro` EC2 instance) backed with a CNN fine-tuned on the [SIIM ISIC Melanoma Classification Competition](https://www.kaggle.com/c/siim-isic-melanoma-classification/leaderboard) data.
 
-![demo ss](images\demo_aws.png)
+![demo ss](images/demo_aws.png)
 
 ## Model Training:
 - Note: Training code is NOT available in this repository.
