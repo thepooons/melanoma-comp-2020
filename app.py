@@ -27,7 +27,7 @@ if __name__ == "__main__":
     st.write('This app is backed with a flavor of\
         [ResNeSt](https://arxiv.org/abs/2004.08955) Model trained on imagenet\
         weights and finetuned on SIIM 2020 data by\
-        [Puneet Singh](https://twitter.com/thepooons).')
+        [Puneet Singh](https://twitter.com/p69ns).')
 
     add_selectbox = st.sidebar.selectbox(
         "How would like to make predictions?",
